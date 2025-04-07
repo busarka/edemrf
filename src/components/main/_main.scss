@@ -1,0 +1,168 @@
+.main {
+  grid-area: main;
+  @include flex-center;
+  align-items: normal;
+  width: 100%;
+  margin-top: 25px;
+
+  &__title {
+    @include font-style(
+      Roboto Flex,
+      600,
+      28px,
+      36px,
+      map-get($colors, main-color)
+    );
+  }
+
+  &__wrapper {
+    display: flex;
+    max-width: 1128px;
+    width: 100%;
+    gap: 22px;
+    flex-direction: column;
+  }
+  &__trips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  max-height: 168px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: map-get($colors, white);
+
+  &__head {
+    margin-bottom: 8px;
+  }
+
+  &__listing-card {
+    display: grid;
+    grid-template-columns: 171px 1fr;
+    gap: 20px;
+    margin-inline: 24px;
+    margin-block: 20px;
+    width: 100%;
+
+    &-inner {
+      display: grid;
+      grid-template-columns: 1fr 224px;
+      gap: 20px;
+    }
+
+    &-title {
+      @include font-style(
+        Roboto Flex,
+        600,
+        20px,
+        28px,
+        map-get($colors, main-color)
+      );
+    }
+  }
+
+  &__photo {
+    width: 171px;
+    height: 128px;
+    border-radius: 8px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    margin-bottom: 13px;
+  }
+
+  &__price {
+    height: 32px;
+    @include flex-center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: map-get($colors, main-background);
+
+    &-time {
+      @include font-style(
+        Roboto Flex,
+        400,
+        14px,
+        20px,
+        map-get($colors, main-color-a8)
+      );
+    }
+
+    &-value {
+      @include font-style(
+        Roboto Flex,
+        600,
+        16px,
+        24px,
+        map-get($colors, main-color)
+      );
+    }
+  }
+
+  &__row-route {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+
+    &-city {
+      @include font-style(
+        Roboto Flex,
+        500,
+        14px,
+        20px,
+        map-get($colors, main-color)
+      );
+    }
+
+    &-time {
+      @include font-style(
+        Roboto Flex,
+        700,
+        12px,
+        16px,
+        map-get($colors, main-color)
+      );
+    }
+  }
+
+  &__row-delivery {
+    display: flex;
+    gap: 8px;
+
+    &-inner {
+      display: flex;
+      gap: 5px;
+
+      &-title {
+        @include font-style(
+          Roboto Flex,
+          400,
+          14px,
+          20px,
+          map-get($colors, main-color)
+        );
+      }
+
+      &-type {
+        @include font-style(
+          Roboto Flex,
+          400,
+          14px,
+          20px,
+          map-get($colors, main-color-a8)
+        );
+      }
+    }
+  }
+}
